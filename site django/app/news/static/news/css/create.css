@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'pixy';
+    src: url('/static/main/fonts/PIXY.TTF') format('truetype'),
+
+}
+body{
+  background: #EFEFBB;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #D4D3DD, #ffffdc);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #D4D3DD, #ffffdc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    background-size: cover;
+    background-attachment: fixed;
+
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*{
+    font-family: 'pixy';
+}
+
+form{
+    width: 600px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    border-radius: 15px
+}
+
+.btns{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px white;
+    outline: none;
+    width: 150px;
+    padding: 5px;
+}

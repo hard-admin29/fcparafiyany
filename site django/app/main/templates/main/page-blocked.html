@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blocked List</title>
+</head>
+<body>
+    <div id="lottie-animation" style="max-width: 200px; margin: 70px auto;"></div>
+    <div style="position:absolute;top:60%;left:50%;transform:translate(-50%,-50%);">
+        <h1 style="text-align:center;">Your ip address is blocked</h1>
+        <h1 style="color:#F2635D;margin: 0;text-align:center;width:100%">
+            {{ ip_address }} is blocked
+        </h1>
+        <div style="text-align: center;display: flex;flex-direction: column;align-items: center;">
+            <h3 style="text-align:center;">Ти забанен я не буду тебя розбанивать</h3>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+    <script>
+        let animation = lottie.loadAnimation({
+        container: document.getElementById('lottie-animation'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: '/static/main/animations/ban.json'
+    });
+    </script>
+</body>
+</html>

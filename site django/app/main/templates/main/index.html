@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC Parafiyany</title>
+
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'main/img/logo/logo.png' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="{% static 'main/js/script.js' %}"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-transperent">
+        <div class="container-fluid">
+          <img class="navbar-brand logo" src="{% static 'main/img//logo/logo.png' %}">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'main' %}">Головна</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">Про нас</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'form' %}">Вступ в команду</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'news' %}">Новини</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Профіль</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="header">Останній матч</h1>
+            </div>
+        </div>
+        <div class="row scoreboard-container">
+            <div class="col-12 col-md-4 text-center">
+                <img src="{% static 'main/img/logo/logo.png' %}" alt="Логотип Команди 1" class="team-logo">
+            </div>
+            <div class="col-12 col-md-4 text-center penalty-container">
+                <span class="score">8 : 7</span>
+                <p class="penalty" style="display: none;">( 3 - 1 )</p>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <img src="{% static 'main/img/logo/logo-nalysnyky.png' %}" alt="Логотип Команди 2" class="team-logo">
+            </div>
+        </div>
+    </div>
+
+    <div class="players">
+        <div class="title">Наші гравці</div>
+        <div class="line-1">
+            <div class="player">
+                <img src="{% static 'main/img/players/mulat.jpg' %}" alt="" class="photo-player">
+                <p class="about-player">Назар Котів<br> (2007)</p>
+            </div>
+            <div class="player">
+                <img src="{% static 'main/img/players/kopka.jpg' %}" alt="" class="photo-player">
+                <p class="about-player">Богдан Копина<br> (2008)</p>
+            </div>
+        </div>
+        <div class="line-2">
+            <div class="player">
+                <img src="{% static 'main/img/players/maks.jpg' %}" alt="" class="photo-player">
+                <p class="about-player">Максим Козій<br> (2008)</p>
+            </div>
+            <div class="player">
+                <img src="{% static 'main/img/players/orest.jpg' %}" alt="" class="photo-player">
+                <p class="about-player">Пацє<br> (хз)</p>
+            </div>
+        </div>
+        <div class="line-3">
+            <div class="player">
+                <img src="{% static 'main/img/players/tarasuk.jpg' %}" alt="" class="photo-player">
+                <p class="about-player"> Тарасюк<br> (2008)</p>
+            </div>
+            <div class="player">
+                <img src="{% static 'main/img/players/malnik.jpg' %}" alt="" class="photo-player">
+                <p class="about-player"> Данік Мельник<br> (2010)</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="about" id="about">
+        <div class="title-about">Про нас</div>
+        <p class="text">Ми ФК "Парафіяни" недавно заснована команда яка замніла ФК "52" в нас в команді таланти сучасного футболу наприклад наш воротарь Тарасюк недавно виграв чемпіонат світу з Тенісу а то означає руки сильні або наш захисник Роман Салідол на чімпіонаті європи проти іспанії в підкаті поламав Серхіо Рамоса ось така в нас команда ми будемо ламати наших суперників і будемо вигравати всі благодійні матчі якщо хочете вступити в ряди 3 ОШБ то вам не сюди а якщо в ФК "Парафіяни" то зайдіть в вкладку вступ в команду та заповніть анкету та ми обовязково вас розглянемо!!!</p>
+    </div>
+
+    <button id="toTopBtn">
+        <div class="left"></div>
+          НА ВЕРХ!
+        <div class="right"></div>
+      </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
